@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DHMZ Zagreb</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+<div id="header">
+	<div class="header-container">
+		<div class="logo-container">
+			<div class="logo">
+				<img src="static/img/logo.svg" width="55" height="45">
+			</div>
+			<div class="logo-text">
+				<h1>DHMZ</h1>
+			</div>
+			<div class="grb">
+				<img src="static/img/grb.png" width="35">
+			</div>
+		</div>
+	</div>
+	<div id="navbar">
+		<nav class="nav-container">
+			<ul class="nav-list">
+				<li><a href="/">Zagreb</a></li>
+				<li><a href="/split">Split</a></li>
+				<li><a href="/rijeka">Rijeka</a></li>
+				<li><a href="/osijek">Osijek</a></li>
+			</ul>
+		</nav>
+	</div>
+</div>
+
+<div id="redbar">
+	<div class="redbar-container">
+		<i class="fas fa-exclamation-triangle"></i>
+		<strong><a href="#" class="alert">Upozorenja</a></strong>
+	</div>
+</div>
+<div id="forecast">
+	<div class="forecast-container">
+
+		<div class="left">
+        	<h1 class="forecast-title">Vrijeme za: {{ data.name }}</h1>
+
+        	<div class="icon">
+
+            <img src="http://openweathermap.org/img/w/{{ data.weather[0].icon }}.png" alt="Image">
+
+            <h2>{{ data.main.temp }} &#176;C</h2>
+
+       	    </div>
+
+             <p>Trenutno vrijeme: <strong>{{ data.weather[0].description }}</strong></p>
+
+        <p>Brzina vjetra: <strong>{{ data.wind.speed }}m/s</strong></p>
+
+        <p>Smjer vjetra: <strong>{{ data.wind.deg }}&#176;</strong></p>
+
+        <p>Min: <strong>{{ data.main.temp_min }} &#176;C</strong></p>
+
+        <p>Max: <strong>{{ data.main.temp_max }} &#176;C</strong></p>
+
+
+        </div>
+
+		
+	<div class="map">
+		<div class="map-bg">
+			<img src="static/img/map.jpg" alt="Karta Hrvatske">
+		</div>
+	</div>	
+
+	</div>
+</div>
+
+<div id="forecast-extra">
+	<div class="forecast-extra-container">
+		<div class="card">
+			<h4><a href="#" class="card-title">Satelitske snimke</a></h4>
+			<p>Aktualna slika i animacija zadnja 24 sata.</p>
+			<a href="#" class="read-more">Opširnije</a>
+		</div>
+		<div class="card">
+			<h4><a href="#" class="card-title">Pojava munja</a></h4>
+			<p>Aktualna slika i animacija zadnja 24 sata.</p>
+			<a href="#" class="read-more">Opširnije</a>
+		</div>
+		<div class="card">
+			<h4><a href="#" class="card-title">Vidjeli ste pijavicu / tornado</a></h4>
+			<p>Aktualna slika i animacija zadnja 24 sata.</p>
+			<a href="#" class="read-more">Opširnije</a>
+		</div>
+	</div>
+</div>
+<div id="bluebar">
+	<div class="bluebar-container">
+		<div class="blue-logo">
+			<img src="static/img/eu_fond.png">
+		</div>
+		<div class="blue-logo">
+			<a href="#" class="metmonic">METMONIC</a>
+		</div>
+		<div class="blue-logo">
+			<img src="static/img/airq-logo.gif">
+		</div>
+
+	</div>
+</div>
+
+</body>
+</html>
